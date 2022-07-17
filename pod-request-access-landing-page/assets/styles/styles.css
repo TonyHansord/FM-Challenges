@@ -9,6 +9,7 @@ body
 {
     --dark-color: #121725;
     --theme-green: #54E6AF;
+    --theme-green-active: #B3FFE2;
 
     position: relative;
     height: 100vh;
@@ -34,9 +35,13 @@ body::before {
 {
     position: relative;
     background-color: var(--theme-green);
+    width: 95%;
     color: var(--dark-color);
     border-radius: 50px;
     border-style: none;
     padding: 20px;
     opacity: 1;
+}
+.btn:hover {
+    background-color: var(--theme-green-active);
 }
