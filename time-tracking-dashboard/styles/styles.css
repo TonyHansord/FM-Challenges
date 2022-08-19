@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0e1323;
+  color: white;
+  width: 100vw;
+  margin: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main-grid {
+  margin: 10% 0;
+  width: 80%;
+  display: grid;
+  gap: 1rem;
+}
+
+.card-container {
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  border-radius: 1rem 1rem 2rem 2rem;
+  padding: 0.6rem 0 0 0;
+}
+
+.card img {
+  position: absolute;
+  right: 5%;
+  top: -4%;
+  z-index: 0;
+}
+
+.card-tall {
+  grid-row: span 2 / auto;
+  border-radius: 1rem;
+}
+
+.name-content {
+  display: grid;
+  background-color: #5747ea;
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.avatar {
+  display: flex;
+  width: 5rem;
+  border-style: solid;
+  border-color: white;
+  border-width: 0.2rem;
+  border-radius: 50%;
+}
+
+.name-heading {
+  padding: 1.5rem 0rem;
+}
+
+.report {
+  font-size: 15px;
+  font-weight: 400;
+  color: #bbc0ff;
+}
+
+.name {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.timeframes {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 10%;
+}
+
+.list-item {
+  color: #bbc0ff;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.active,
+.list-item:hover {
+  color: white;
+}
+
+.card-content {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #1c204b;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.card-heading {
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.options-button {
+  min-height: 1rem;
+  display: inline-flex;
+  letter-spacing: 0.1rem;
+  align-items: center;
+}
+
+.card-time {
+  font-weight: 300;
+  font-size: 3.5rem;
+}
+
+.card-prev {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #bbc0ff;
+}
+
+#name-card {
+  background-color: #1c204b;
+}
+
+#work-card {
+  background-color: #ff8b64;
+}
+
+#play-card {
+  background-color: #55c2e6;
+}
+
+#study-card {
+  background-color: #ff5e7d;
+}
+
+#exercise-card {
+  background-color: #4bcf82;
+}
+
+#social-card {
+  background-color: #7335d2;
+}
+
+#self-care-card {
+  background-color: #f1c75b;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 500px) {
+  .card {
+    height: 7rem;
+  }
+
+  .card-content p,
+  h1 {
+    font-size: 0.5rem;
+  }
+}
+
+/* All other screen sizes */
+@media only screen and (min-width: 500px) {
+  body {
+    justify-content: center;
+  }
+  .main-grid {
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  }
+}
