@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
+:root {
+  --body-background-color: #0e1323;
+  --card-background-color: #1c204b;
+  --primary-color: #5747ea;
+  --shadow-color: #292e65;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #bbc0ff;
+  --card-radius: 1rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,18 +23,20 @@ body {
   position: relative;
   align-items: center;
   flex-direction: column;
-  background-color: #0e1323;
-  color: white;
+  background-color: var(--body-background-color);
+  color: var(--primary-text-color);
   width: 100vw;
   margin: auto;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.2rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .main-grid {
@@ -36,15 +48,17 @@ body {
 
 .card-container {
   overflow: hidden;
+  border-radius: var(--card-radius);
+  box-shadow: 2px 1px 5px 1px var(--shadow-color);
 }
 
 .card {
   position: relative;
-  border-radius: 1rem 1rem 2rem 2rem;
+  border-radius: var(--card-radius) var(--card-radius) 2rem 2rem;
   padding: 0.6rem 0 0 0;
 }
 
-.card img {
+.card-icon {
   position: absolute;
   right: 5%;
   top: -4%;
@@ -53,21 +67,22 @@ body {
 
 .card-tall {
   grid-row: span 2 / auto;
-  border-radius: 1rem;
+  border-radius: var(--card-radius);
+  box-shadow: 2px 2px 8px 2px var(--shadow-color);
 }
 
 .name-content {
   display: grid;
-  background-color: #5747ea;
-  border-radius: 1rem;
+  background-color: var(--primary-color);
+  border-radius: var(--card-radius);
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .avatar {
-  display: flex;
   width: 5rem;
+  height: 5rem;
   border-style: solid;
-  border-color: white;
+  border-color: var(--primary-text-color);
   border-width: 0.2rem;
   border-radius: 50%;
 }
@@ -79,7 +94,7 @@ body {
 .report {
   font-size: 15px;
   font-weight: 400;
-  color: #bbc0ff;
+  color: var(--secondary-text-color);
 }
 
 .name {
@@ -88,14 +103,15 @@ body {
 }
 
 .timeframes {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   list-style: none;
   padding: 10%;
 }
 
 .list-item {
-  color: #bbc0ff;
+  color: var(--secondary-text-color);
   cursor: pointer;
   font-weight: 400;
   font-size: 18px;
@@ -103,17 +119,19 @@ body {
 
 .active,
 .list-item:hover {
-  color: white;
+  color: var(--primary-text-color);
 }
 
 .card-content {
   position: relative;
+  display: flex;
+  flex-direction: column;
   left: 0;
   bottom: 0;
   width: 100%;
   margin-top: 2rem;
-  background-color: #1c204b;
-  border-radius: 1rem;
+  background-color: var(--card-background-color);
+  border-radius: var(--card-radius);
   padding: 1.5rem;
 }
 
@@ -127,6 +145,7 @@ body {
 
 .options-button {
   min-height: 1rem;
+  font-size: 1.5rem;
   display: inline-flex;
   letter-spacing: 0.1rem;
   align-items: center;
@@ -139,8 +158,9 @@ body {
 
 .card-prev {
   font-size: 0.9rem;
+  padding: 5% 0;
   font-weight: 400;
-  color: #bbc0ff;
+  color: var(--secondary-text-color);
 }
 
 #name-card {
@@ -172,19 +192,35 @@ body {
 }
 
 /* Small Screens */
-@media only screen and (max-width: 500px) {
-  .card {
-    height: 7rem;
+@media only screen and (max-width: 657px) {
+  .time-container {
+    display: flex;
+    justify-content: space-between;
   }
-
-  .card-content p,
-  h1 {
-    font-size: 0.5rem;
+  .card-time {
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  .name-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .name {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  .name-heading {
+    padding: 1rem;
+  }
+  .timeframes {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 /* All other screen sizes */
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 657px) {
   body {
     justify-content: center;
   }

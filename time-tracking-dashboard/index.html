@@ -14,15 +14,12 @@
     <link rel="stylesheet" href="styles/styles.css" />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style></style>
   </head>
   <body>
-    <div class="main-grid">
+    <main class="main-grid">
       <div class="card-tall" id="name-card">
         <div class="name-content">
-          <img class="avatar" src="images/image-jeremy.png" alt="" />
+          <img class="avatar" src="images/image-jeremy.png" alt="avatar" />
           <div class="name-heading">
             <p class="report">Report for</p>
             <h1 class="name">Jeremy Robson</h1>
@@ -36,114 +33,152 @@
       </div>
       <div class="card-container">
         <div class="card" id="work-card">
-          <img src="images/icon-work.svg" alt="" />
+          <img class="card-icon" src="images/icon-work.svg" alt="work-icon" />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Work </span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">5hrs</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">7hrs</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">5hrs</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">7hrs</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card" id="play-card">
-          <img src="images/icon-play.svg" alt="" />
+          <img class="card-icon" src="images/icon-play.svg" alt="play-icon" />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Play</span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">1hr</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">2hrs</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">1hr</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">2hrs</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card" id="study-card">
-          <img src="images/icon-study.svg" alt="" />
+          <img class="card-icon" src="images/icon-study.svg" alt="study-icon" />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Study</span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">0hrs</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">1hr</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">0hrs</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">1hr</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card" id="exercise-card">
-          <img src="images/icon-exercise.svg" alt="" />
+          <img
+            class="card-icon"
+            src="images/icon-exercise.svg"
+            alt="exercise-icon"
+          />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Exercise</span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">1hr</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">1hr</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">1hr</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">1hr</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card" id="social-card">
-          <img src="images/icon-social.svg" alt="" />
+          <img
+            class="card-icon"
+            src="images/icon-social.svg"
+            alt="social-icon"
+          />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Social</span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">1hr</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">3hrs</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">1hr</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">3hrs</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
       <div class="card-container">
         <div class="card" id="self-care-card">
-          <img src="images/icon-self-care.svg" alt="" />
+          <img
+            class="card-icon"
+            src="images/icon-self-care.svg"
+            alt="self-care-icon"
+          />
           <div class="card-content">
             <h1 class="card-heading">
               <span class="heading">Self Care</span
-              ><span class="options-button">...</span>
+              ><span class="options-button"
+                ><img src="images/icon-ellipsis.svg" alt="options-btn"
+              /></span>
             </h1>
-            <p class="card-time">0hrs</p>
-            <!-- daily -->
-            <p class="card-prev">
-              Previous - <span class="prev-time">1hr</span>
-            </p>
+            <div class="time-container">
+              <p class="card-time">0hrs</p>
+              <!-- daily -->
+              <p class="card-prev">
+                Previous - <span class="prev-time">1hr</span>
+              </p>
+            </div>
             <!-- daily -->
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Tony Hansord</a>.
+      </div>
+    </footer>
     <script type="module" src="scripts/index.js"></script>
   </body>
 </html>
